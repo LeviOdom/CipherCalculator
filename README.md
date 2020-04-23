@@ -2,7 +2,7 @@
 A functioning simple calculator which translates numbers to a letter  
 cipher for coding employee prices or item cost for retail situations.
 
-Copyright &copy; 2020 Levi Odom
+Copyright &copy; 2020 Levi Odom using GPLv2 only
 
 This program is free software; you can redistribute it and/or modify  
 it under the terms of the GNU General Public License as published by  
@@ -15,7 +15,8 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along  
 with this program; if not, write to the Free Software Foundation, Inc.,  
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.  
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA or see  
+<https://www.gnu.org/licenses/>.
 
 Contact the original programmer by email at llaodom@gmail.com  
 
