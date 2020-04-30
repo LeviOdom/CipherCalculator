@@ -2,6 +2,9 @@
 A functioning simple calculator which translates numbers to a letter  
 cipher for coding employee prices or item cost for retail situations.
 
+Originally named inrochdale-calculator, referencing the cipher for   
+the number to letter code.
+
 Copyright &copy; 2020 Levi Odom using GPLv2 only
 
 This program is free software; you can redistribute it and/or modify  
@@ -70,5 +73,8 @@ be implemented.
 ## Change History
 All major changes and some minor changes will be listed here, along  
 with their version number and date of change.
+
+Commit d13986b: "Update name in README"  
+(Note: Name changed from inrochdale-calculator to CipherCalculator.)
 
 For more information, see the changelog (linked below listed changes).
