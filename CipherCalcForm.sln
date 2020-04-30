@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherCalcForm", "CipherCalcForm\CipherCalcForm.csproj", "{DB3DC60F-2515-43C5-B854-EDD1D0613104}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB3DC60F-2515-43C5-B854-EDD1D0613104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3DC60F-2515-43C5-B854-EDD1D0613104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3DC60F-2515-43C5-B854-EDD1D0613104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3DC60F-2515-43C5-B854-EDD1D0613104}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {71DD8FAB-EA44-4E5B-BF1C-1A931989AC60}
+	EndGlobalSection
+EndGlobal

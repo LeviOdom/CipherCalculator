@@ -10,7 +10,7 @@ namespace CipherCalcForm
     {
         //takes two terms entered in the parameters and performs the operation
         //specified by the sign sent via "op", i.e. +, -, *, /
-        private double calcAnswer(double term1, double term2, string op)
+        public double CalcAnswer(double term1, double term2, string op)
         {
             double answer;
 
@@ -18,6 +18,15 @@ namespace CipherCalcForm
             {
                 case "+":
                     answer = term1 + term2;
+                    break;
+                case "-":
+                    answer = term1 - term2;
+                    break;
+                case "x":
+                    answer = term1 * term2;
+                    break;
+                case "/":
+                    answer = term1 / term2;
                     break;
                 default:
                     answer = 0;
