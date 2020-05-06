@@ -189,5 +189,27 @@ namespace CipherCalcForm
         {
             UserBox.Text = "";
         }
+
+        private void backspaceButton_Click(object sender, EventArgs e)
+        {
+            string currentText = UserBox.Text;
+            int i = currentText.Length;
+
+            if(i <= 0)
+            {
+                //MessageBox.Show("Current Text Empty: " + currentText);
+
+                UserBox.Text = "";
+            }
+            else
+            {
+                //MessageBox.Show("Current Text: " + currentText);
+
+                currentText = currentText.Substring(0, i - 1);
+
+                UserBox.Text = currentText;
+            }
+            
+        }
     }
 }

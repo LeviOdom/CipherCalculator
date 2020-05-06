@@ -52,6 +52,7 @@
             this.operatorLabel = new System.Windows.Forms.Label();
             this.clearEquationButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
+            this.backspaceButton = new System.Windows.Forms.Button();
             this.topToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,9 +60,9 @@
             // 
             this.UserBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.UserBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserBox.Location = new System.Drawing.Point(25, 50);
+            this.UserBox.Location = new System.Drawing.Point(34, 48);
             this.UserBox.Name = "UserBox";
-            this.UserBox.Size = new System.Drawing.Size(202, 29);
+            this.UserBox.Size = new System.Drawing.Size(254, 29);
             this.UserBox.TabIndex = 0;
             this.UserBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.UserBox.WordWrap = false;
@@ -179,7 +180,7 @@
             // addButton
             // 
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.Location = new System.Drawing.Point(187, 139);
+            this.addButton.Location = new System.Drawing.Point(233, 139);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(40, 40);
             this.addButton.TabIndex = 13;
@@ -190,7 +191,7 @@
             // subtractButton
             // 
             this.subtractButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtractButton.Location = new System.Drawing.Point(233, 139);
+            this.subtractButton.Location = new System.Drawing.Point(279, 139);
             this.subtractButton.Name = "subtractButton";
             this.subtractButton.Size = new System.Drawing.Size(40, 40);
             this.subtractButton.TabIndex = 14;
@@ -201,9 +202,9 @@
             // equalButton
             // 
             this.equalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equalButton.Location = new System.Drawing.Point(187, 226);
+            this.equalButton.Location = new System.Drawing.Point(187, 139);
             this.equalButton.Name = "equalButton";
-            this.equalButton.Size = new System.Drawing.Size(86, 40);
+            this.equalButton.Size = new System.Drawing.Size(40, 81);
             this.equalButton.TabIndex = 17;
             this.equalButton.Text = "=";
             this.equalButton.UseVisualStyleBackColor = true;
@@ -212,7 +213,7 @@
             // multiplyButton
             // 
             this.multiplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.multiplyButton.Location = new System.Drawing.Point(187, 180);
+            this.multiplyButton.Location = new System.Drawing.Point(233, 180);
             this.multiplyButton.Name = "multiplyButton";
             this.multiplyButton.Size = new System.Drawing.Size(40, 40);
             this.multiplyButton.TabIndex = 15;
@@ -223,7 +224,7 @@
             // divideButton
             // 
             this.divideButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.divideButton.Location = new System.Drawing.Point(233, 180);
+            this.divideButton.Location = new System.Drawing.Point(279, 180);
             this.divideButton.Name = "divideButton";
             this.divideButton.Size = new System.Drawing.Size(40, 40);
             this.divideButton.TabIndex = 16;
@@ -260,7 +261,7 @@
             this.helpButton});
             this.topToolStrip.Location = new System.Drawing.Point(0, 0);
             this.topToolStrip.Name = "topToolStrip";
-            this.topToolStrip.Size = new System.Drawing.Size(310, 25);
+            this.topToolStrip.Size = new System.Drawing.Size(344, 25);
             this.topToolStrip.TabIndex = 18;
             this.topToolStrip.Text = "topToolStrip";
             // 
@@ -278,7 +279,7 @@
             // 
             this.operatorLabel.AutoSize = true;
             this.operatorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.operatorLabel.Location = new System.Drawing.Point(233, 53);
+            this.operatorLabel.Location = new System.Drawing.Point(294, 53);
             this.operatorLabel.Name = "operatorLabel";
             this.operatorLabel.Size = new System.Drawing.Size(25, 24);
             this.operatorLabel.TabIndex = 20;
@@ -286,10 +287,10 @@
             // 
             // clearEquationButton
             // 
-            this.clearEquationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearEquationButton.Location = new System.Drawing.Point(174, 98);
+            this.clearEquationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearEquationButton.Location = new System.Drawing.Point(187, 98);
             this.clearEquationButton.Name = "clearEquationButton";
-            this.clearEquationButton.Size = new System.Drawing.Size(53, 40);
+            this.clearEquationButton.Size = new System.Drawing.Size(40, 40);
             this.clearEquationButton.TabIndex = 11;
             this.clearEquationButton.Text = "CE";
             this.clearEquationButton.UseVisualStyleBackColor = true;
@@ -297,20 +298,32 @@
             // 
             // clearButton
             // 
-            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.Location = new System.Drawing.Point(233, 98);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(53, 40);
+            this.clearButton.Size = new System.Drawing.Size(40, 40);
             this.clearButton.TabIndex = 12;
             this.clearButton.Text = "C";
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
+            // backspaceButton
+            // 
+            this.backspaceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backspaceButton.Location = new System.Drawing.Point(279, 98);
+            this.backspaceButton.Name = "backspaceButton";
+            this.backspaceButton.Size = new System.Drawing.Size(40, 40);
+            this.backspaceButton.TabIndex = 21;
+            this.backspaceButton.Text = "B";
+            this.backspaceButton.UseVisualStyleBackColor = true;
+            this.backspaceButton.Click += new System.EventHandler(this.backspaceButton_Click);
             // 
             // CipherCalcControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Controls.Add(this.backspaceButton);
             this.Controls.Add(this.clearEquationButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.operatorLabel);
@@ -334,7 +347,7 @@
             this.Controls.Add(this.oneButton);
             this.Controls.Add(this.UserBox);
             this.Name = "CipherCalcControl";
-            this.Size = new System.Drawing.Size(310, 364);
+            this.Size = new System.Drawing.Size(344, 364);
             this.topToolStrip.ResumeLayout(false);
             this.topToolStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -367,5 +380,6 @@
         private System.Windows.Forms.Label operatorLabel;
         private System.Windows.Forms.Button clearEquationButton;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button backspaceButton;
     }
 }
