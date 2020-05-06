@@ -13,12 +13,6 @@ namespace CipherCalcForm
     public partial class CipherCalcControl: UserControl
     {
         private CipherCalcModel cipherCalculator = new CipherCalcModel();
-        
-        private bool firstStored = false;
-        private double firstTerm = 0;
-        private double secondTerm = 0;
-        private double answer = 0;
-        private string operationFlag = "";
 
         public CipherCalcControl()
         {
@@ -77,18 +71,21 @@ namespace CipherCalcForm
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            if(firstStored==false)
-            {
-                firstTerm = Double.Parse(UserBox.Text);
-                firstStored = true;
+            //MessageBox.Show("" + cipherCalculator.GetFirstStored());
 
+            if(cipherCalculator.GetFirstStored() == false)
+            {
+                cipherCalculator.FirstTerm = Double.Parse(UserBox.Text);
                 //MessageBox.Show("firstStored (T\\F)= " + firstStored 
                 //    + "\nfirstTerm(int) = " + firstTerm);
 
                 //UserBox.AppendText(" " + addButton.Text + " ");
-                operatorLabel.Text = "+";
+                cipherCalculator.SetAddition();
+                operatorLabel.Text = cipherCalculator.OperationFlag;
                 UserBox.Text = "";
-                operationFlag = operatorLabel.Text;
+
+                //MessageBox.Show("First Stored is " + cipherCalculator.GetFirstStored()
+                //    + "\nOperator: " + cipherCalculator.OperationFlag);
             }
             else 
             {
@@ -98,14 +95,13 @@ namespace CipherCalcForm
 
         private void SubtractButton_Click(object sender, EventArgs e)
         {
-            if (firstStored == false)
+            if (cipherCalculator.GetFirstStored() == false)
             {
-                firstTerm = Double.Parse(UserBox.Text);
-                firstStored = true;
+                cipherCalculator.FirstTerm = Double.Parse(UserBox.Text);
 
-                operatorLabel.Text = "-";
+                cipherCalculator.SetSubtraction();
+                operatorLabel.Text = cipherCalculator.OperationFlag;
                 UserBox.Text = "";
-                operationFlag = operatorLabel.Text;
             }
             else
             {
@@ -115,14 +111,13 @@ namespace CipherCalcForm
 
         private void MultiplyButton_Click(object sender, EventArgs e)
         {
-            if (firstStored == false)
+            if (cipherCalculator.GetFirstStored() == false)
             {
-                firstTerm = Double.Parse(UserBox.Text);
-                firstStored = true;
+                cipherCalculator.FirstTerm = Double.Parse(UserBox.Text);
 
-                operatorLabel.Text = "x";
+                cipherCalculator.SetMultiplication();
+                operatorLabel.Text = cipherCalculator.OperationFlag;
                 UserBox.Text = "";
-                operationFlag = operatorLabel.Text;
             }
             else
             {
@@ -132,14 +127,13 @@ namespace CipherCalcForm
 
         private void DivideButton_Click(object sender, EventArgs e)
         {
-            if (firstStored == false)
+            if (cipherCalculator.GetFirstStored() == false)
             {
-                firstTerm = Double.Parse(UserBox.Text);
-                firstStored = true;
+                cipherCalculator.FirstTerm = Double.Parse(UserBox.Text);
 
-                operatorLabel.Text = "/";
+                cipherCalculator.SetDivision();
+                operatorLabel.Text = cipherCalculator.OperationFlag;
                 UserBox.Text = "";
-                operationFlag = operatorLabel.Text;
             }
             else
             {
@@ -149,24 +143,24 @@ namespace CipherCalcForm
 
         private void EqualButton_Click(object sender, EventArgs e)
         {
-            if (firstStored == true)
-            {
-                //MessageBox.Show("Variable firstStored is true.\n" 
-                //    + "Operator is " + operatorLabel.Text + "\nEvaluate.");
+            //MessageBox.Show("First Stored is " + cipherCalculator.GetFirstStored());
 
-                secondTerm = Double.Parse(UserBox.Text);
+            if (cipherCalculator.GetFirstStored() == true)
+            {
+            //MessageBox.Show("Variable firstStored is true.\n" 
+            //    + "Operator is " + operatorLabel.Text + "\nEvaluate.");
+
+                cipherCalculator.SecondTerm = Double.Parse(UserBox.Text);
 
                 //MessageBox.Show("Variable secondTerm is " + secondTerm);
 
-                answer = cipherCalculator.CalcAnswer(firstTerm, secondTerm, operationFlag);
+                //string solution = "" + cipherCalculator.CalcAnswer();
 
-                MessageBox.Show("Evalutate:\n" + firstTerm + " " + operationFlag
-                    + " " + secondTerm + "\n   = " + answer);
+                //MessageBox.Show("Evalutate:\n" + firstTerm + " " + operationFlag
+                //    + " " + secondTerm + "\n   = " + answer);
 
-                UserBox.Text = "" + answer;
-                firstStored = false;
-                operationFlag = "=";
-                operatorLabel.Text = operationFlag;
+                UserBox.Text = "" + cipherCalculator.GetCalcAnswer();
+                operatorLabel.Text = cipherCalculator.OperationFlag;
             }
             else
             {
@@ -186,12 +180,14 @@ namespace CipherCalcForm
 
         private void ClearEquationButton_Click(object sender, EventArgs e)
         {
-
+            cipherCalculator.ClearModel();
+            operatorLabel.Text = cipherCalculator.OperationFlag;
+            UserBox.Text = "";
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
-
+            UserBox.Text = "";
         }
     }
 }
