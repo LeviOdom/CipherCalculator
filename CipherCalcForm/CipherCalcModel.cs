@@ -30,6 +30,7 @@ namespace CipherCalcForm
             OperationFlag = oF;
         }
 
+        #region ACCESSING AND CHANGING VARIABLES
         public void ClearModel()
         {
             firstStored = false;
@@ -128,6 +129,14 @@ namespace CipherCalcForm
                 }
             }
         }
+
+        public double GetAnswer()
+        {
+            return answer;
+        }
+        #endregion
+        //Solves expression with CalcAnswer and uses GetAnswer 
+        //  to return the solution
         public double GetCalcAnswer()
         {
             //MessageBox.Show("get calc answer");
@@ -135,17 +144,14 @@ namespace CipherCalcForm
             return GetAnswer();
         }
 
-        public double GetAnswer()
-        {
-            return answer;
-        }
-
-        //takes two terms entered in the parameters and performs the operation
-        //specified by the sign sent via "op", i.e. +, -, *, /
+        //takes the two stored terms and the operationFlag to create
+        //  an expression and stores the solution in the answer
+        //  variable; does not return a value
         public void CalcAnswer()
         {
             //MessageBox.Show("calc answer");
             
+            //each case solves the answer based on the operationFlag
             switch (operationFlag)
             {
                 case "+":

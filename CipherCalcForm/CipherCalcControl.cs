@@ -168,16 +168,6 @@ namespace CipherCalcForm
             }
         }
 
-        private void CipherButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DecipherButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ClearEquationButton_Click(object sender, EventArgs e)
         {
             cipherCalculator.ClearModel();
@@ -211,5 +201,16 @@ namespace CipherCalcForm
             }
             
         }
+        private void CipherButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DecipherButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
