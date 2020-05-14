@@ -180,7 +180,7 @@ namespace CipherCalcForm
             UserBox.Text = "";
         }
 
-        private void backspaceButton_Click(object sender, EventArgs e)
+        private void BackspaceButton_Click(object sender, EventArgs e)
         {
             string currentText = UserBox.Text;
             int i = currentText.Length;
@@ -203,12 +203,49 @@ namespace CipherCalcForm
         }
         private void CipherButton_Click(object sender, EventArgs e)
         {
+            //saves current text in the TextBox
+            //string currentText = UserBox.Text;
 
+            //variable that can hold the enciphered code
+            //declared here so that the try box does not include
+            //  creation of the variable, just the Encipher method
+            string code;
+            
+            try
+            {
+                code = cipherCalculator.Encipher(UserBox.Text);
+                UserBox.Text = code;
+            }
+            
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Cipher Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void DecipherButton_Click(object sender, EventArgs e)
         {
+            //saves current text in the TextBox
+            //string currentText = UserBox.Text;
 
+            //variable that can hold the enciphered code
+            //declared here so that the try box does not include
+            //  creation of the variable, just the Encipher method
+            string decode;
+
+            try
+            {
+                decode = cipherCalculator.Decipher(UserBox.Text);
+                UserBox.Text = decode;
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Decipher Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 

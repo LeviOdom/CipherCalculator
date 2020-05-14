@@ -316,7 +316,7 @@
             this.backspaceButton.TabIndex = 21;
             this.backspaceButton.Text = "B";
             this.backspaceButton.UseVisualStyleBackColor = true;
-            this.backspaceButton.Click += new System.EventHandler(this.backspaceButton_Click);
+            this.backspaceButton.Click += new System.EventHandler(this.BackspaceButton_Click);
             // 
             // CipherCalcControl
             // 

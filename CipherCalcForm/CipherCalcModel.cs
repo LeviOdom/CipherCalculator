@@ -15,6 +15,8 @@ namespace CipherCalcForm
         private double answer; //holds the current answer for the expression
         private string operationFlag; //holds the value of the operation to find the answer
 
+        //private string cipherAnswer; //holds the encoded answer
+
         public CipherCalcModel()
         {
             ClearModel();
@@ -76,6 +78,11 @@ namespace CipherCalcForm
             set { answer = value; }
         }
 
+        //public string GetCipherAnswer()
+        //{
+        //    return cipherAnswer;
+        //}
+
         public void SetAddition()
         {
             operationFlag = "+";
@@ -135,6 +142,7 @@ namespace CipherCalcForm
             return answer;
         }
         #endregion
+        
         //Solves expression with CalcAnswer and uses GetAnswer 
         //  to return the solution
         public double GetCalcAnswer()
@@ -180,6 +188,115 @@ namespace CipherCalcForm
             }
         }
 
+        public string Encipher(string plainText)
+        {
+            //string uncode = plainText.ToString();
+            string code = null;
 
+            foreach(char num in plainText)
+            {
+                code += NumToLet(num) + "";
+            }
+
+            return code;
+        }
+
+        public string Decipher(string cipher)
+        {
+            string price = null;
+
+            foreach(char let in cipher)
+            {
+                price += LetToNum(let) + "";
+            }
+
+            return price;
+        }
+
+        public char LetToNum(char let)
+        {
+            char num;
+
+            switch(let)
+            {
+                case 'I':
+                    num = '1';
+                    break;
+                case 'N':
+                    num = '2';
+                    break;
+                case 'R':
+                    num = '3';
+                    break;
+                case 'O':
+                    num = '4';
+                    break;
+                case 'C':
+                    num = '5';
+                    break;
+                case 'H':
+                    num = '6';
+                    break;
+                case 'D':
+                    num = '7';
+                    break;
+                case 'A':
+                    num = '8';
+                    break;
+                case 'L':
+                    num = '9';
+                    break;
+                case 'E':
+                    num = '0';
+                    break;
+                default:
+                    throw new Exception("Error in decipher. Cannot decode.");
+            }
+
+            return num;
+        }
+
+        public char NumToLet(char num)
+        {
+            char let;
+
+            switch (num)
+            {
+                case '1':
+                    let = 'I';
+                    break;
+                case '2':
+                    let = 'N';
+                    break;
+                case '3':
+                    let = 'R';
+                    break;
+                case '4':
+                    let = 'O';
+                    break;
+                case '5':
+                    let = 'C';
+                    break;
+                case '6':
+                    let = 'H';
+                    break;
+                case '7':
+                    let = 'D';
+                    break;
+                case '8':
+                    let = 'A';
+                    break;
+                case '9':
+                    let = 'L';
+                    break;
+                case '0':
+                    let = 'E';
+                    break;
+                default:
+                    throw new Exception("Error in cipher.  Cannot encode");
+            }
+
+            return let;
+        }
     }
 }
