@@ -53,6 +53,7 @@
             this.clearEquationButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.backspaceButton = new System.Windows.Forms.Button();
+            this.empPriceButton = new System.Windows.Forms.Button();
             this.topToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -318,11 +319,23 @@
             this.backspaceButton.UseVisualStyleBackColor = true;
             this.backspaceButton.Click += new System.EventHandler(this.BackspaceButton_Click);
             // 
+            // empPriceButton
+            // 
+            this.empPriceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empPriceButton.Location = new System.Drawing.Point(187, 231);
+            this.empPriceButton.Name = "empPriceButton";
+            this.empPriceButton.Size = new System.Drawing.Size(125, 35);
+            this.empPriceButton.TabIndex = 22;
+            this.empPriceButton.Text = "Emp Price";
+            this.empPriceButton.UseVisualStyleBackColor = true;
+            this.empPriceButton.Click += new System.EventHandler(this.EmpPriceButton_Click);
+            // 
             // CipherCalcControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Controls.Add(this.empPriceButton);
             this.Controls.Add(this.backspaceButton);
             this.Controls.Add(this.clearEquationButton);
             this.Controls.Add(this.clearButton);
@@ -381,5 +394,6 @@
         private System.Windows.Forms.Button clearEquationButton;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button backspaceButton;
+        private System.Windows.Forms.Button empPriceButton;
     }
 }

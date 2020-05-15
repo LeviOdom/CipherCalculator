@@ -298,5 +298,24 @@ namespace CipherCalcForm
 
             return let;
         }
+
+        //calculate employee price (store cost plus 10%) based on number parsed from text
+        public string EmpCostCalc(string store)
+        {
+            try
+            {
+                double cost = Double.Parse(store);
+                cost *= 1.10;
+
+                store = cost.ToString();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "General Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return store;
+        }
     }
 }

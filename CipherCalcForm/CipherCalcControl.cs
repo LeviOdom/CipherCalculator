@@ -247,7 +247,13 @@ namespace CipherCalcForm
                 MessageBox.Show(ex.Message, "Decipher Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        
+        //sets textbox to display employee pricing based on current number
+        private void EmpPriceButton_Click(object sender, EventArgs e)
+        {
+            string empPrice = cipherCalculator.EmpCostCalc(UserBox.Text);
 
-
+            UserBox.Text = empPrice;
+        }
     }
 }
