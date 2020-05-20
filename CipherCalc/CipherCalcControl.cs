@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CipherCalcForm
+namespace CipherCalc
 {
-    public partial class CipherCalcControl: UserControl
+    public partial class CipherCalcControl : Form
     {
-        private CipherCalcModel cipherCalculator = new CipherCalcModel();
 
+        private CipherCalcModel cipherCalculator = new CipherCalcModel();
         public CipherCalcControl()
         {
             InitializeComponent();
@@ -34,21 +34,41 @@ namespace CipherCalcForm
             UserBox.AppendText(threeButton.Text);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FourButton_Click(object sender, EventArgs e)
         {
             UserBox.AppendText(fourButton.Text);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FiveButton_Click(object sender, EventArgs e)
         {
             UserBox.AppendText(fiveButton.Text);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SixButton_Click(object sender, EventArgs e)
         {
             UserBox.AppendText(sixButton.Text);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SevenButton_Click(object sender, EventArgs e)
         {
             UserBox.AppendText(sevenButton.Text);
@@ -69,11 +89,16 @@ namespace CipherCalcForm
             UserBox.AppendText(zeroButton.Text);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddButton_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("" + cipherCalculator.GetFirstStored());
 
-            if(cipherCalculator.GetFirstStored() == false)
+            if (cipherCalculator.GetFirstStored() == false)
             {
                 cipherCalculator.FirstTerm = Double.Parse(UserBox.Text);
                 //MessageBox.Show("firstStored (T\\F)= " + firstStored 
@@ -87,12 +112,17 @@ namespace CipherCalcForm
                 //MessageBox.Show("First Stored is " + cipherCalculator.GetFirstStored()
                 //    + "\nOperator: " + cipherCalculator.OperationFlag);
             }
-            else 
+            else
             {
                 MessageBox.Show("Error in input.");
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SubtractButton_Click(object sender, EventArgs e)
         {
             if (cipherCalculator.GetFirstStored() == false)
@@ -109,6 +139,11 @@ namespace CipherCalcForm
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MultiplyButton_Click(object sender, EventArgs e)
         {
             if (cipherCalculator.GetFirstStored() == false)
@@ -125,6 +160,11 @@ namespace CipherCalcForm
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DivideButton_Click(object sender, EventArgs e)
         {
             if (cipherCalculator.GetFirstStored() == false)
@@ -141,14 +181,19 @@ namespace CipherCalcForm
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EqualButton_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("First Stored is " + cipherCalculator.GetFirstStored());
 
             if (cipherCalculator.GetFirstStored() == true)
             {
-            //MessageBox.Show("Variable firstStored is true.\n" 
-            //    + "Operator is " + operatorLabel.Text + "\nEvaluate.");
+                //MessageBox.Show("Variable firstStored is true.\n" 
+                //    + "Operator is " + operatorLabel.Text + "\nEvaluate.");
 
                 cipherCalculator.SecondTerm = Double.Parse(UserBox.Text);
 
@@ -168,6 +213,11 @@ namespace CipherCalcForm
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClearEquationButton_Click(object sender, EventArgs e)
         {
             cipherCalculator.ClearModel();
@@ -175,17 +225,27 @@ namespace CipherCalcForm
             UserBox.Text = "";
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClearButton_Click(object sender, EventArgs e)
         {
             UserBox.Text = "";
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BackspaceButton_Click(object sender, EventArgs e)
         {
             string currentText = UserBox.Text;
             int i = currentText.Length;
 
-            if(i <= 0)
+            if (i <= 0)
             {
                 //MessageBox.Show("Current Text Empty: " + currentText);
 
@@ -199,8 +259,14 @@ namespace CipherCalcForm
 
                 UserBox.Text = currentText;
             }
-            
+
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CipherButton_Click(object sender, EventArgs e)
         {
             //saves current text in the TextBox
@@ -210,21 +276,26 @@ namespace CipherCalcForm
             //declared here so that the try box does not include
             //  creation of the variable, just the Encipher method
             string code;
-            
+
             try
             {
                 code = cipherCalculator.Encipher(UserBox.Text);
                 UserBox.Text = code;
             }
-            
+
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message, "Cipher Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DecipherButton_Click(object sender, EventArgs e)
         {
             //saves current text in the TextBox
@@ -247,8 +318,12 @@ namespace CipherCalcForm
                 MessageBox.Show(ex.Message, "Decipher Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
-        //sets textbox to display employee pricing based on current number
+
+        /// <summary>
+        /// sets textbox to display employee pricing based on current number
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EmpPriceButton_Click(object sender, EventArgs e)
         {
             string empPrice = cipherCalculator.EmpCostCalc(UserBox.Text);

@@ -1,4 +1,4 @@
-﻿namespace CipherCalcForm
+﻿namespace CipherCalc
 {
     partial class CipherCalcControl
     {
@@ -20,15 +20,14 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify 
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CipherCalcControl));
             this.UserBox = new System.Windows.Forms.TextBox();
             this.oneButton = new System.Windows.Forms.Button();
             this.twoButton = new System.Windows.Forms.Button();
@@ -47,14 +46,11 @@
             this.divideButton = new System.Windows.Forms.Button();
             this.cipherButton = new System.Windows.Forms.Button();
             this.decipherButton = new System.Windows.Forms.Button();
-            this.topToolStrip = new System.Windows.Forms.ToolStrip();
-            this.helpButton = new System.Windows.Forms.ToolStripButton();
             this.operatorLabel = new System.Windows.Forms.Label();
             this.clearEquationButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.backspaceButton = new System.Windows.Forms.Button();
             this.empPriceButton = new System.Windows.Forms.Button();
-            this.topToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // UserBox
@@ -255,27 +251,6 @@
             this.decipherButton.UseVisualStyleBackColor = true;
             this.decipherButton.Click += new System.EventHandler(this.DecipherButton_Click);
             // 
-            // topToolStrip
-            // 
-            this.topToolStrip.AllowMerge = false;
-            this.topToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.helpButton});
-            this.topToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.topToolStrip.Name = "topToolStrip";
-            this.topToolStrip.Size = new System.Drawing.Size(344, 25);
-            this.topToolStrip.TabIndex = 18;
-            this.topToolStrip.Text = "topToolStrip";
-            // 
-            // helpButton
-            // 
-            this.helpButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.helpButton.Image = ((System.Drawing.Image)(resources.GetObject("helpButton.Image")));
-            this.helpButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(36, 22);
-            this.helpButton.Text = "Help";
-            this.helpButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            // 
             // operatorLabel
             // 
             this.operatorLabel.AutoSize = true;
@@ -334,13 +309,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(368, 379);
             this.Controls.Add(this.empPriceButton);
             this.Controls.Add(this.backspaceButton);
             this.Controls.Add(this.clearEquationButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.operatorLabel);
-            this.Controls.Add(this.topToolStrip);
             this.Controls.Add(this.decipherButton);
             this.Controls.Add(this.cipherButton);
             this.Controls.Add(this.equalButton);
@@ -359,10 +333,11 @@
             this.Controls.Add(this.twoButton);
             this.Controls.Add(this.oneButton);
             this.Controls.Add(this.UserBox);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CipherCalcControl";
-            this.Size = new System.Drawing.Size(344, 364);
-            this.topToolStrip.ResumeLayout(false);
-            this.topToolStrip.PerformLayout();
+            this.Text = "Cipher Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,8 +363,6 @@
         private System.Windows.Forms.Button divideButton;
         private System.Windows.Forms.Button cipherButton;
         private System.Windows.Forms.Button decipherButton;
-        private System.Windows.Forms.ToolStrip topToolStrip;
-        private System.Windows.Forms.ToolStripButton helpButton;
         private System.Windows.Forms.Label operatorLabel;
         private System.Windows.Forms.Button clearEquationButton;
         private System.Windows.Forms.Button clearButton;
@@ -397,3 +370,4 @@
         private System.Windows.Forms.Button empPriceButton;
     }
 }
+

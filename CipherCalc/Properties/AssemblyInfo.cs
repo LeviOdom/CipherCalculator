@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CipherCalcForm")]
+[assembly: AssemblyTitle("CipherCalc")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CipherCalcForm")]
+[assembly: AssemblyProduct("CipherCalc")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("db3dc60f-2515-43c5-b854-edd1d0613104")]
+[assembly: Guid("3c581bc9-f109-4f2c-a809-e437f0aafaed")]
 
 // Version information for an assembly consists of the following four values:
 //

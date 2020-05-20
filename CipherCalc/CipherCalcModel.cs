@@ -5,10 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CipherCalcForm
+namespace CipherCalc
 {
     class CipherCalcModel
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private bool firstStored; //a boolean to determine if firstTerm has been set
         private double firstTerm; //holds the first term in the expression
         private double secondTerm; //holds the second term in the expression
@@ -22,6 +25,13 @@ namespace CipherCalcForm
             ClearModel();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="fT"></param>
+        /// <param name="sT"></param>
+        /// <param name="s"></param>
+        /// <param name="oF"></param>
         public CipherCalcModel(double fT, 
             double sT, double s, string oF)
         {
